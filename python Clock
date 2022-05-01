@@ -1,0 +1,14 @@
+# create a clock using python
+     from tkinter import *
+     from tkinter.ttk import *
+     from time import strftime
+     root = Tk()
+     root.title('CLOCK Created by JETTI PAVANKUMAR')
+     label = Label(root, anchor='center', font=("ds-digital", 100), background="black", foreground="white")
+     label.pack(fill=X)
+     def time():
+         string = strftime('%H:%M:%S %p')
+         label.config(text=string)
+         label.after(1, time)
+     time()
+     mainloop()
